@@ -4,8 +4,12 @@ if not script_id then print("No ID Found") return end
 repeat task.wait() until game:IsLoaded()
 task.wait(0.5)
 
-if game.CreatorId == 35966884 then
+local Game = game.CreatorId 
+
+if Game == 35966884 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/chillingcapi/Relay/refs/heads/main/Ac%20Bp"))()
+elseif Game == 33161040 then 
+    game:GetService("Players").LocalPlayer:Kick("Script locked for this game temporarely because of game update that could have new anticheat. Wait until we update")
 end
 task.wait(1)
 
