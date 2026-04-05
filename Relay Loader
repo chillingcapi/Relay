@@ -10,6 +10,7 @@ if Game == 35966884 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/chillingcapi/Relay/refs/heads/main/Ac%20Bp"))()
 elseif Game == 33161040 then 
     game:GetService("Players").LocalPlayer:Kick("Script locked for this game temporarely because of game update that could have new anticheat. Wait until we update")
+    return
 end
 task.wait(1)
 
