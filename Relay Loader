@@ -4,8 +4,10 @@ if not script_id then print("No ID Found") return end
 repeat task.wait() until game:IsLoaded()
 task.wait(0.5)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/chillingcapi/Relay/refs/heads/main/Xeno%2CSolara"))()
-task.wait(1)
+if (identifyexecutor() ~= "Xeno" and identifyexecutor() ~= "Solara") then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/chillingcapi/Relay/refs/heads/main/Xeno%2CSolara"))()
+    task.wait(1)
+end
 
 local luarmorURL = string.format("https://api.luarmor.net/files/v4/loaders/%s.lua", script_id)
 
