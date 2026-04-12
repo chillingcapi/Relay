@@ -9,6 +9,20 @@ if (identifyexecutor() == "Xeno" and identifyexecutor() == "Solara") then
     task.wait(1)
 end
 
+task.spawn(function()
+    while task.wait(0.5) do 
+        local Player = game.Players.LocalPlayer
+        local MainMenu = Player.PlayerGui:FindFirstChild("MainMenu")
+        if not MainMenu then continue end
+        local ButtonContainer = MainMenu:FindFirstChild("ButtonContainer")
+        if not ButtonContainer then continue end
+        local PlayButton = ButtonContainer:FindFirstChild("PlayButton")
+        if PlayButton then 
+            firesignal(PlayButton.MouseButton1Click)
+        end
+    end
+end)
+
 local luarmorURL = string.format("https://api.luarmor.net/files/v4/loaders/%s.lua", script_id)
 
 local success, result = pcall(function()
